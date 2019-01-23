@@ -2,33 +2,11 @@ import numpy as np
 import csv
 import matplotlib.pyplot as plt
 axes = plt.gca()
-#axes.set_xlim([-1,3])
-#axes.set_ylim([- 1,0.5])
 file1=np.loadtxt(open("out.csv", "rb"), delimiter=",", skiprows=0)
 print(file1)
-for mat in file1:
-	i=0
-	#mat=file1
-	flag=True
-	if(flag):
+for i in range(60):
+		mat=file1[i]
 		print(mat)
-		i=70
-		flag=False
-	#if i<=-1:
-	#	i+=1
-	#	continue
-		
-	#for i in range(0,75,3):
-	 #   print(i)
-	   # v=[]
-	    #v = np.array([mat[i],mat[i+1]])
-	    #plt.plot([mat[i]],[mat[i+1]],marker='p',markersize=3,color="red")
-        #plt.plot([x], [y], marker='o', markersize=3, color="red")
-        #print(v.shape)
-        #print(arr1.shape)
-	    #v=np.reshape(v,(1,2))
-	    #arr1=np.append(arr1,v,axis=0)
-	    #print(np.shape(arr1))
 		plt.plot([mat[0],mat[3]],[mat[1],mat[4]],marker='o', markersize=3, color="red")
 		plt.plot([mat[3],mat[6]],[mat[4],mat[7]],marker='o', markersize=3, color="red")
 		plt.plot([mat[6],mat[9]],[mat[7],mat[10]],marker='o', markersize=3, color="red")
